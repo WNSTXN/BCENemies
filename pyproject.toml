@@ -1,0 +1,42 @@
+[tool.pylint.format]
+good-names = ['x', 'y', 'z', 'i', 'id', 'ok']
+
+[tool.pylint.messages_control]
+disable = [
+    'missing-module-docstring',
+    'no-name-in-module',
+    'useless-import-alias',
+    'line-too-long',
+    'too-many-arguments',
+    'too-few-public-methods',
+]
+
+[tool.pyright]
+reportUnknownVariableType = false
+reportUnknownMemberType = false
+reportMissingTypeStubs = false
+
+[tool.poetry]
+name = "BCENemies"
+version = "0.1.0"
+description = ""
+authors = ["winstxnhdw <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+duckdb = "^0.10.2"
+polars = "^0.20.21"
+pyarrow = "^15.0.2"
+httpx = "^0.27.0"
+uvloop = "^0.19.0"
+pydantic = "^2.7.0"
+
+[tool.poetry.group.dev.dependencies]
+pyright = "^1.1.316"
+pylint = "^2.17.4"
+ruff = "^0.4.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
